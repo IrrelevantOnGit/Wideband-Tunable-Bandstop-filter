@@ -1,0 +1,129 @@
+# ============================================================
+# .gitignore — Wideband Tunable Bandstop Filter (HFSS Project)
+# ============================================================
+# Keeps the repo clean: only source .aedt design files,
+# scripts, screenshots, and data exports are tracked.
+# All simulation result caches are excluded (~3200 files).
+# ============================================================
+
+
+# -------------------------------------------------------
+# HFSS / Ansys Electronics Desktop — Simulation Results
+# -------------------------------------------------------
+# These are auto-generated solver output folders.
+# They are huge, binary, and fully reproducible by re-running
+# the simulation. Never need to be version-controlled.
+
+*.aedtresults/
+**/*.aedtresults/
+
+# Individual result file extensions found in .aedtresults trees
+*.sd
+*.g3derr
+*.idmap
+*.EMConvData
+*.profile
+*.stats
+*.ngmesh
+*.cmesh
+*.imesh
+*.dmesh
+*.adp
+*.asol
+*.asol_priv
+*.fct
+*.nvc
+*.tvc
+*.tvm
+*.tvz
+*.evtrs
+*.evtrs_0
+*.evtrs_1
+*.evtrs_hyd
+*.sf_msh
+*.sf_mshhdr
+*.sf_fld_0
+*.sf_fld_1
+*.imp
+*.su
+
+# Field/solution data files inside result subdirectories
+*_SU.txt
+*_F[0-9]*/
+
+
+# -------------------------------------------------------
+# HFSS Lock Files (created when a project is open)
+# -------------------------------------------------------
+*.aedt.lock
+*.lock
+
+
+# -------------------------------------------------------
+# HFSS Temporary / Working Files
+# -------------------------------------------------------
+*.tmp
+*.semaphore
+
+# Ansys scratch / temp dirs
+anstmp/
+ansys_tmp/
+
+
+# -------------------------------------------------------
+# OS & Editor Junk
+# -------------------------------------------------------
+
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS (if ever opened there)
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VSCode
+.vscode/
+
+# JetBrains
+.idea/
+
+# Vim / Emacs swaps
+*.swp
+*.swo
+*~
+
+
+# -------------------------------------------------------
+# Python
+# -------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.env
+.venv/
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+
+# ============================================================
+# WHAT IS TRACKED (kept in git — do NOT add these above)
+# ============================================================
+# ✔  *.aedt                  — HFSS design source files
+# ✔  scripts/*.py            — PyAEDT build / automation scripts
+# ✔  final screenshots/*.png — Result screenshots
+# ✔  *.csv                   — Exported S-parameter data
+# ✔  *.xlsx                  — Tuning tables / data
+# ✔  *.png / *.jpg           — Plots and figures
+# ✔  README, docs, reports   — Documentation
+# ============================================================
+
+# Force-include final screenshots even if a broader rule catches PNGs
+!final screenshots/
+!final screenshots/*.png
